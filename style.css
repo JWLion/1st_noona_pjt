@@ -1,22 +1,7 @@
-body{
+html, body{
     display:contents;
-}
-
-.navbar{
-    float:right;
-    margin:20px;
-    
-
-}
-
-.nav-item{
-    text-decoration: none;
-    color:black;
-    margin-right:15px;
-}
-
-.nav-item:hover {
-    text-decoration: underline;
+    overflow-x: hidden; /* 가로 스크롤 제거 */
+    box-sizing: border-box; /* 모든 요소에 패딩과 테두리를 포함 */
 }
 
 .main {
@@ -72,42 +57,110 @@ body{
     color: #202124;
 }
 
-.footer{
+.language-options {
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    padding: 15px 0; /* 위아래 여백 추가 */
+    font-size: 14px;
+    color: black;
+}
+
+.footer {
     position: absolute;
-    bottom: 0px;
-    background: #f2f2f2;
-    width: 100%
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #dadce0;
+    padding: 10px 30px; /* 좌우 여백 */
+    font-size: 14px;
+    color: black;
 }
 
-.firstline{
-    padding: 15px 30px;
-    border-bottom: 1px solid #dadce0;
-    font-size: 15px;
-    color: black;
+.footer-top {
+    width: 100%;
+    text-align: left; /* 왼쪽 정렬 */
+    font-weight: bold;
+    margin-bottom: 5px; /* 아래 간격 */
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #dadce0; /* 회색 선 */
+    margin: 5px 0; /* 위아래 간격 */
+}
+
+.footer-content {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between; /* 좌우로 정렬 */
+    align-items: center;
+    padding-right:50px;
+}
+
+.left-links {
+    display: flex;
+    gap: 20px; /* 링크 간의 간격 */
+    margin-top: 10px; /* "대한민국"과 간격 */
+    
+}
+
+.right-links {
+    display: flex;
+    gap: 20px; /* 링크 간의 간격 */
+    margin-left: auto; /* 오른쪽으로 밀기 */
+    margin-top:10px;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    }
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+    background-color: purple; /* Hover 효과 */
+    border-radius: 5px;
+}
+
+.left-links a,
+.right-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.left-links a:hover,
+.right-links a:hover {
+    color: white;
+    background-color: purple; /* Hover 시 배경색 변경 */
+    border-radius: 5px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    font-size: 14px;
 }
 
-.secondline{
-    padding: 15px 30px;
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-    margin-right:15px;   
+.left-section {
+    display: flex;
+    gap: 15px;
 }
 
-.secondline-second{
-    float:right;
-    text-decoration: none;
-    color: black;
-    margin-right:15px;
-}
-
-.secondline:hover {
-    text-decoration: underline;
-}
-
-.secondline-second:hover {
-    text-decoration: underline;
+.right-section {
+    display: flex;
+    gap: 20px;
 }
